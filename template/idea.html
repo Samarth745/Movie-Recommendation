@@ -1,0 +1,46 @@
+<html>
+<header style="text-align: center;">
+    <h1>Movie Recommendation NLP Project</h1>
+</header>
+<body>
+<button style="background-color: #DEDEDE; font-size: 20px;"><a href="/" style="color: black;" >Home</a></button>
+<p>
+    Welcome to our Movie Recommendation NLP project! In this project, we aim to provide personalized movie
+    recommendations to users based on their interests and preferences. <br>
+    We have implemented a content-based filtering techniques.<br>
+</p>
+<h4>Content-Based Filtering</h4>
+<p>
+    Content-based filtering is a recommendation method that is based on the characteristics of items. <br>In our
+    project, we
+    use various features of movies, such as genre, description, cast, etc., to generate recommendations. <br>The
+    similarity
+    between movies is calculated using cosine similarity.<br>
+</p>
+<h4>Cosine Similarity</h4>
+<p>
+    Cosine similarity is a measure of the similarity between two non-zero vectors. <br>In our project, we use cosine
+    similarity to measure the similarity between movies based on their features. <br>Given two movie feature vectors,
+    the
+    cosine similarity between them will be high if the angle between the vectors is small, indicating that the movies
+    are similar.<br>
+</p>
+<h4>Vectorization</h4>
+<p>
+    In our project, we have used the 5000 most frequent words in the dataset as features for our movie descriptions.<br>
+    This means that each movie description has been transformed into a 5000-dimensional vector, where each dimension
+    represents the presence or absence of one of the 5000 words.<br>
+</p>
+<h4>Data</h4>
+<p>
+    The data utilized in this project was sourced from Kaggle, specifically the 5000 Movie TMDB dataset file.<br>
+</p>
+<h4>How to use</h4>
+<p>
+    To use the system, simply input a list of movie titles that you have liked in the past.
+    <br>Our system will generate
+    a
+    list of movies using content-based filtering techniques.<br>
+</p>
+</body>
+</html>

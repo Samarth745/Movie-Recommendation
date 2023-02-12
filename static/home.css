@@ -1,0 +1,116 @@
+
+.* { box-sizing: border-box; }
+.body {
+  font: 20px Courier New;
+  /* background-image: url({{ url_for('static', filename='/img/home.png') }});
+  background-size: cover;
+  background-repeat: no-repeat;" */
+  background-color: black;
+}
+.searchbox {
+margin: 5% 25%;
+color: white;
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 30px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 500px;
+}
+input[type=submit] {
+  background-color: black;
+  color: #fff;
+  margin-left: 10px;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d44d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: black;
+  color: white;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #161616;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav li {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+input[type=submit]{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

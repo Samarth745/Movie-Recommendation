@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Movie recommendations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="{{ url_for('static',filename='results.css') }}" type="text/css" media="all" />
+
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div id="shell">
+  <div id="header">
+    <h1 id="logo">MOVIE SEARCHED : {{search}}</h1>
+
+    <div id="navigation">
+      <ul>
+        <li><a class="active" href="/">HOME</a></li>
+      </ul>
+    </div>
+    <div id="sub-navigation">
+    </div>
+  </div>
+  <div id="main">
+    <div id="content">
+      <div class="box">
+        <div class="head">
+          <h1>MOVIE SUGGESTIONS</h1>
+          <p class="text-right"><a href="#"></a></p>
+        </div>
+{% for i in all_list %}
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">{{i[2]}}</span></span> <a href={{i[0]}}><img src={{i[1]}} alt="" /></a> </div>
+          <p>{{i[2]}}<p><br>
+          <p>Ratings: {{i[4]}}<p><br>
+          <p>Description: {{i[3]}}</p>
+        </div>
+{% endfor %}
+        <div class="cl">&nbsp;</div>
+      </div>
+
+  <div id="footer">
+    <p class="lf">Copyright &copy; 2022 - All Rights Reserved</p>
+    <p class="rf">Design by ChocoTemplates.com</a></p>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+<!-- END PAGE SOURCE -->
+</body>
+</html>
